@@ -1,6 +1,7 @@
 provider "occm" {
-  occm_username = "user@mail.com"
-  occm_password = "password"
+  occm_endpoint = ""
+  occm_username = ""
+  occm_password = ""
 }
 
 resource "occm_instance" "my_manager" {}

@@ -8,7 +8,6 @@ func resourceOCCMInstance() *schema.Resource {
 	return &schema.Resource{
 		Create: resourceServerCreate,
 		Read:   resourceServerRead,
-		Update: resourceServerUpdate,
 		Delete: resourceServerDelete,
 	}
 }

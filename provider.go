@@ -13,7 +13,7 @@ func Provider() *schema.Provider {
 		Schema: map[string]*schema.Schema{
 			"occm_endpoint": {
 				Type:        schema.TypeString,
-				required:    false,
+				Optional:    true,
 				Description: "OCCM Endpoint",
 				DefaultFunc: func() (interface{}, error) {
 					if v := os.Getenv("OCCM_ENDPOINT"); v != "" {
@@ -25,7 +25,7 @@ func Provider() *schema.Provider {
 			},
 			"occm_username": {
 				Type:        schema.TypeString,
-				required:    false,
+				Optional:    true,
 				Description: "OCCM Username",
 				DefaultFunc: func() (interface{}, error) {
 					if v := os.Getenv("OCCM_USERNAME"); v != "" {
@@ -37,7 +37,7 @@ func Provider() *schema.Provider {
 			},
 			"occm_password": {
 				Type:        schema.TypeString,
-				required:    true,
+				Optional:    true,
 				Description: "OCCM Password",
 				DefaultFunc: func() (interface{}, error) {
 					if v := os.Getenv("OCCM_PASSWORD"); v != "" {
