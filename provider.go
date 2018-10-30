@@ -54,3 +54,9 @@ func Provider() *schema.Provider {
 		},
 	}
 }
+func providerConfigure(d *schema.ResourceData) (interface{}, error) {
+	return gapi.New(
+		d.Get("auth").(string),
+		d.Get("url").(string),
+	)
+}
